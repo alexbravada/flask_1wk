@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Туры по направлению </title>
+</head>
+<body>
+<p>Куба: <a href="/tours/1/">Marina Lake Hotel & Spa 62000 4* </a></p>
+<h1>Туры по направлению Новосибирск</h1>
+
+{% for tour_id, value in data.items() %}
+<p>{{value['country']}}: <a href="/data/tours/{{tour_id}}/">{{value['title']}} {{value['price']}} {{value['stars']}}*</a>  </p>
+{% endfor %}
+
+</body>
+</html>

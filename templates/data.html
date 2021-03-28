@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Все туры:</h1>
+
+{% for tour_id, value in data.items() %}
+<p>{{value['country']}}: <a href="/data/tours/{{tour_id}}/">{{value['title']}} {{value['price']}} {{value['stars']}}*</a>  </p>
+{% endfor %}
+</body>
+</html>
